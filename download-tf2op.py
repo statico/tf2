@@ -48,5 +48,4 @@ for div in soup.find_all('div', {'class': 'trade'}):
 
     for quality, title, details in seen:
       row = [trade_id, int(time.time()), intent, quality, title.encode('ascii', 'replace'), details.encode('ascii', 'replace')]
-      print repr(row)
       writer.writerow(row)
