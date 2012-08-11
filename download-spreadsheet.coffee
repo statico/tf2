@@ -4,6 +4,7 @@ fs = require 'fs'
 https = require 'https'
 async = require 'async'
 strftime = require 'strftime'
+path = require 'path'
 
 contents = null
 
@@ -38,8 +39,9 @@ async.waterfall [
     if obj.version != '1.0'
       return cb "Version must be 1.0, got #{ obj.version }"
 
-    fs.mkdir './data'
-    filename = "./data/#{ strftime('%Y-%m-%d.csv') }"
+    dir = path.join path.dirname(process.argv[1]), 'pricelist'
+    fs.mkdir dir
+    filename = path.join dir, strftime('%Y-%m-%d.csv')
     writer = fs.createWriteStream filename
 
     headers = 0
