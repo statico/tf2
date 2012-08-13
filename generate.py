@@ -55,7 +55,7 @@ def do_stats(reader):
   for key in keys:
     count = stats[key]
     if count > 10:
-      fh.write('<tr><td>%s</td><td>%s</td></tr>' % (key, count))
+      fh.write('<tr><td class="name">%s</td><td>%s</td></tr>' % (key, count))
 
 fh.write('<h2>TF2 Outpost wants</h2>')
 fh.write('<div class="long"><table>')
@@ -115,7 +115,7 @@ for quality, slot, name, low, high, unit in reader:
   if cls:
     fh.write('''
       <tr>
-        <td>%(quality)s %(name)s</td>
+        <td>%(quality)s <span class="name">%(name)s</span></td>
         <td>%(old_high).2f %(old_unit)s</td>
         <td class="%(cls)s">%(high).2f %(unit)s</td>
       </tr>''' % locals())

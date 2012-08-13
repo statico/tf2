@@ -41,5 +41,10 @@ $(function() {
   div.appendTo(document.body);
   do_calc(null, key_price);
 
+  $(document).on('click', '.name', function() {
+    var query = $(this).text();
+    window.open('http://wiki.teamfortress.com/w/index.php?title=Special%3ASearch&search=' + query + '&go=Go');
+  });
+
 });
 
