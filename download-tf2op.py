@@ -24,7 +24,7 @@ else:
   fh.close()
 
 writer = csv.writer(codecs.open(filename, 'a', 'utf8'))
-html = urllib.urlopen('http://www.tf2outpost.com/').read().decode('utf8')
+html = urllib.urlopen('http://www.tf2outpost.com/').read()
 soup = BeautifulSoup(html)
 
 for div in soup.find_all('div', {'class': 'trade'}):
