@@ -36,6 +36,7 @@ QUALITY = {
     '5': 'unusual',
     '6': 'unique',
     '11': 'strange',
+    '13': 'haunted',
     }
 
 for div in soup.find_all('div', {'class': 'trade'}):
