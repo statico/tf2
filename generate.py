@@ -35,6 +35,12 @@ fh.write('''<!doctype html>
   <a href="%(yesterday)s.html">← %(yesterday)s</a>
   <a href="%(tomorrow)s.html">%(tomorrow)s →</a>
 </p>
+<p>
+  <a href="http://backpack.tf/pricelist">backpack.tf price list</a>
+  <a href="http://tf2spreadsheet.blogspot.com">tf2 spreadsheet</a>
+  <a href="http://www.tf2outpost.com/search">TF2 Outpost search</a>
+  <a href="http://tf2tp.com/searchMongo72.php">TF2 TP search</a>
+</p>
 <h1>Trade Stats for %(today)s</h1>
 ''' % locals())
 
