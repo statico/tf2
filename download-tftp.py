@@ -76,6 +76,7 @@ for div in soup.find_all('div', {'class': 'trade'}):
       seen.add(('WANT', quality, title, ''))
 
   for intent, quality, title, details in seen:
-    row = [trade_id, int(time.time()), intent, quality, title, details]
+    row = [trade_id, int(time.time()), intent, quality,
+           title.encode('ascii', 'replace'), details.encode('ascii', 'replace')]
     if sys.stdout.isatty(): print row
     writer.writerow(row)
