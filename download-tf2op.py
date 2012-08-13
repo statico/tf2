@@ -8,6 +8,7 @@ import sys
 import re
 import time
 import codecs
+import datetime
 
 filename = os.path.join( os.path.dirname(sys.argv[0]), 'trades', 'tf2op-%s.csv'
     % datetime.datetime.now().strftime('%Y-%m-%d'))
