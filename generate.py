@@ -29,6 +29,8 @@ fh.write('''<!doctype html>
 <meta charset="utf-8"/>
 <title>%(today)s trade stats</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="common.js"></script>
 </head>
 <body>
 <p>
@@ -70,6 +72,10 @@ fh.write('</table></div>')
 fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
 fh.write('<div class="long"><table>')
 
+key_price = 0
+bill_price = 0
+bud_price = 0
+
 old = {}
 reader = csv.reader(open('pricelist/%s.csv' % yesterday, 'r'))
 for quality, slot, name, low, high, unit in reader:
@@ -82,6 +88,14 @@ for quality, slot, name, low, high, unit in reader:
 
 reader = csv.reader(open('pricelist/%s.csv' % today, 'r'))
 for quality, slot, name, low, high, unit in reader:
+
+  if name == 'key':
+    key_price = float(high)
+  if name == "bill's hat":
+    bill_price = float(high)
+  if name == 'earbuds':
+    bud_price = float(high)
+
   key = '%s %s' % (quality, name)
   cls = None
   try:
@@ -110,5 +124,13 @@ fh.write('</table></div>')
 
 fh.write('<h2>backpack.tf updates</h2>')
 fh.write('<iframe class="long" src="http://x.langworth.com/tf2-prices.html"></iframe>')
+
+fh.write('''
+  <script>
+    key_price = %(key_price).5f;
+    bill_price = %(bill_price).5f;
+    bud_price = %(bud_price).5f;
+  </script>
+''' % locals())
 
 fh.write('</body></html>\n')
