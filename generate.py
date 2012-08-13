@@ -2,10 +2,14 @@
 # -*- coding: utf-8 -*-
 
 from collections import defaultdict
+from bs4 import BeautifulSoup
+import urllib
 import datetime
 import sys
 import os
 import csv
+import re
+import json
 
 if len(sys.argv) > 1:
   dt = datetime.strptime(sys.argv[1], '%Y-%m-%d')
@@ -50,12 +54,12 @@ def do_stats(reader):
   stats = defaultdict(int)
   for tid, t, intent, quality, name, details in reader:
     if intent == 'WANT':
-      stats['%s %s' % (quality, name)] += 1
+      stats[(quality, name)] += 1
   keys = reversed(sorted(stats.keys(), key=lambda x: stats[x]))
   for key in keys:
     count = stats[key]
     if count > 10:
-      fh.write('<tr><td class="name">%s</td><td>%s</td></tr>' % (key, count))
+      fh.write('<tr><td>%s <span class="name">%s</span></td><td>%s</td></tr>' % (key[0], key[1], count))
 
 fh.write('<h2>TF2 Outpost wants</h2>')
 fh.write('<div class="long"><table>')
@@ -125,11 +129,15 @@ fh.write('</table></div>')
 fh.write('<h2>backpack.tf updates</h2>')
 fh.write('<iframe class="long" src="http://x.langworth.com/tf2-prices.html"></iframe>')
 
+finance = json.loads(open('trades/finance-%s.json' % today, 'r').read())
+bud_dollars = finance['bud_dollars']
+
 fh.write('''
   <script>
     key_price = %(key_price).5f;
     bill_price = %(bill_price).5f;
     bud_price = %(bud_price).5f;
+    bud_dollars = %(bud_dollars).5f;
   </script>
 ''' % locals())
 
