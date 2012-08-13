@@ -9,7 +9,8 @@ import re
 import time
 import codecs
 
-filename = os.path.join(os.path.dirname(sys.argv[0]), 'trades', 'tf2op.csv')
+filename = os.path.join( os.path.dirname(sys.argv[0]), 'trades', 'tf2op-%s.csv'
+    % datetime.datetime.now().strftime('%Y-%m-%d'))
 
 last_trade = 0
 try:
