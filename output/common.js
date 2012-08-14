@@ -49,7 +49,8 @@ $(function() {
 
   $(document).on('click', '.name', function() {
     var query = $(this).text();
-    window.open('https://www.google.com/search?q=site%3Ahttp%3A%2F%2Fbackpack.tf%2Fvote%2F+"Price+Suggestion"+' + query);
+    window.open('http://wiki.teamfortress.com/w/index.php?title=Special%3ASearch&go=Go&search=' + query);
+    //window.open('https://www.google.com/search?q=site%3Ahttp%3A%2F%2Fbackpack.tf%2Fvote%2F+"Price+Suggestion"+' + query);
   });
 
 });
