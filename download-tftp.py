@@ -31,10 +31,14 @@ html = urllib.urlopen('http://tf2tp.com/recent.php').read()
 soup = BeautifulSoup(html)
 
 QUALITY = {
+    '0': 'normal',
     '1': 'genuine',
     '3': 'vintage',
     '5': 'unusual',
     '6': 'unique',
+    '7': 'community',
+    '8': 'valve',
+    '9': 'self-made',
     '11': 'strange',
     '13': 'haunted',
     }

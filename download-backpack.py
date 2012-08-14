@@ -10,44 +10,63 @@ import time
 import datetime
 import codecs
 
-filename = os.path.join(
-    os.path.dirname(sys.argv[0]), 'pricelist',
-    'backpack-%s.csv' % datetime.datetime.now().strftime('%Y-%m-%d'))
+today = datetime.datetime.now()
+yesterday = today - datetime.timedelta(1)
 
-writer = csv.writer(codecs.open(filename, 'a', 'utf8'))
-html = urllib.urlopen('http://backpack.tf/pricelist').read()
+def mkpath(dt):
+  return os.path.join(os.path.dirname(sys.argv[0]), 'changes',
+      'backpack-%s.csv' % dt.strftime('%Y-%m-%d'))
+
+for path in [mkpath(yesterday), mkpath(today)]:
+  seen = {}
+  try:
+    fh = codecs.open(path, 'r', 'utf8')
+  except Exception, e:
+    if sys.stdout.isatty(): print e
+  else:
+    reader = csv.reader(fh)
+    for url, quality, name, change in reader:
+      seen[url] = True
+
+QUALITY = {
+    't0': 'normal',
+    't1': 'genuine',
+    't3': 'vintage',
+    't5': 'unusual',
+    't6': 'unique',
+    't7': 'community',
+    't8': 'valve',
+    't9': 'self-made',
+    't11': 'strange',
+    't13': 'haunted',
+    }
+
+writer = csv.writer(codecs.open(mkpath(today), 'a', 'utf8'))
+html = urllib.urlopen('http://backpack.tf/latest').read()
 soup = BeautifulSoup(html)
 
-COLUMNS = (
-    ('unique', 2),
-    ('vintage', 3),
-    ('genuine', 4),
-    ('strange', 5),
-    ('haunted', 6)
-)
-
-table = soup.find('table', {'id': 'pricelist'})
-for row in table.tbody.find_all('tr'):
+table = soup.find('table', {'class': 'table-striped'})
+for row in table.find_all('tr'):
   cells = row.find_all('td')
+  if len(cells) < 3: continue
 
-  try:
-    name = cells[0].string.encode('ascii', 'replace').lower()
-    slot = cells[1].string.encode('ascii', 'replace').lower()
-  except IndexError:
-    continue
+  url = 'http://backpack.tf' + cells[0].a['href']
+  if url in seen: continue
 
-  for quality, index in COLUMNS:
-    value = ' '.join(cells[index].stripped_strings)
-    match = re.search(r'(\d+(?:\.\d+)?)', value)
-    if not match: continue
-    price = float(match.group(1))
+  span = cells[0].a.span
+  if span and span.get('class'):
+    quality = QUALITY.get(span['class'][0], 'unique')
+  else:
+    quality = 'unique'
 
-    unit = 'ref'
-    if re.search(r'key', value): unit = 'key'
-    elif re.search(r'bud', value): unit = 'bud'
-    elif re.search(r'rec', value): unit = 'rec'
-    elif re.search(r'scrap', value): unit = 'scrap'
+  name = ' '.join(cells[0].a.stripped_strings)\
+      .encode('ascii', 'replace').strip().lower()
 
-    row = [quality, slot, name, price, price, unit]
-    if sys.stdout.isatty(): print row
-    writer.writerow(row)
+  tag = cells[2].i
+  change = tag.get('data-original-title', tag.get('title'))
+  change = re.sub(r'\d+ \w+ ago', '', change)
+  change = change.encode('ascii', 'replace').strip().lower()
+
+  row = [url, quality, name, change]
+  if sys.stdout.isatty(): print row
+  writer.writerow(row)
