@@ -47,6 +47,7 @@ fh.write('''<!doctype html>
   <a href="http://tf2spreadsheet.blogspot.com">tf2 spreadsheet</a>
   <a href="http://www.tf2outpost.com/search">TF2 Outpost search</a>
   <a href="http://tf2tp.com/searchMongo72.php">TF2 TP search</a>
+  <a href="http://www.sourceop.com/modules.php?name=Forums&file=viewforum&f=21">SourceOp</a>
 </p>
 <h1>Trade Stats for %(today)s</h1>
 ''' % locals())
