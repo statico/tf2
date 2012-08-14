@@ -80,7 +80,6 @@ fh.write('</div>')
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
 fh.write('<div class="long"><table>')
-fh.write('</div>')
 
 key_price = 0
 bill_price = 0
@@ -131,11 +130,34 @@ for quality, slot, name, low, high, unit in reader:
       </tr>''' % locals())
 
 fh.write('</table></div>')
+fh.write('</div>')
+
+fh.write('<div class="module">')
+fh.write('<h2>Backpack.tf Changes</h2>')
+fh.write('<div class="long"><table>')
+
+old = {}
+reader = csv.reader(open('changes/backpack-%s.csv' % today, 'r'))
+for url, quality, name, change in reader:
+  if quality == 'unusual': continue # too noisy
+
+  if 'up' in change:
+    cls = 'up'
+  elif 'down' in change:
+    cls = 'down'
+  else:
+    cls = 'new'
+
+  fh.write('''
+    <tr>
+      <td><a href="%(url)s">%(name)s</a></td>
+      <td class="%(cls)s">%(change)s</td>
+    </tr>''' % locals())
+
+fh.write('</table></div>')
+fh.write('</div>')
 
 fh.write('<hr/>');
-
-fh.write('<h2>backpack.tf updates</h2>')
-fh.write('<iframe class="long" src="http://x.langworth.com/tf2-prices.html"></iframe>')
 
 fh.write('<h2>TF2 finance</h2>')
 fh.write('<p><img src="finance.jpg"/></p>')

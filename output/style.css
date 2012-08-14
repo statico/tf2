@@ -10,8 +10,16 @@ div.long {
   height: 300px;
   overflow-y: scroll;
   border: 2px solid #cccccc; }
+  div.long a:link {
+    color: black;
+    text-decoration: none; }
+  div.long a:hover {
+    text-decoration: underline;
+    color: blue; }
   div.long table td, div.long table th {
     padding-right: 1em; }
+  div.long table td.new, div.long table td.up, div.long table td.down {
+    white-space: nowrap; }
 
 iframe {
   width: 80%;
