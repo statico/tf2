@@ -54,3 +54,7 @@ iframe {
   .name:hover {
     text-decoration: underline;
     color: blue; }
+
+footer {
+  color: red;
+  font-weight: bold; }

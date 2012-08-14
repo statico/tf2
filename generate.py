@@ -12,7 +12,7 @@ import re
 import json
 
 if len(sys.argv) > 1:
-  dt = datetime.strptime(sys.argv[1], '%Y-%m-%d')
+  dt = datetime.datetime.strptime(sys.argv[1], '%Y-%m-%d')
 else:
   dt = datetime.datetime.now()
 
@@ -31,6 +31,7 @@ fh.write('''<!doctype html>
 <html>
 <head>
 <meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow"/>
 <title>%(today)s trade stats</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -141,6 +142,10 @@ reader = csv.reader(open('changes/backpack-%s.csv' % today, 'r'))
 for url, quality, name, change in reader:
   if quality == 'unusual': continue # too noisy
 
+  match = re.search(r'(\w) (\d+(?:\.\d+)? \w+) from (\d+(?:\.\d+)? \w+)', change)
+  old = match.group(2)
+  new = match.group(3)
+
   if 'up' in change:
     cls = 'up'
   elif 'down' in change:
@@ -151,7 +156,8 @@ for url, quality, name, change in reader:
   fh.write('''
     <tr>
       <td><a href="%(url)s">%(name)s</a></td>
-      <td class="%(cls)s">%(change)s</td>
+      <td>%(old)s</td>
+      <td class="%(cls)s">%(new)s</td>
     </tr>''' % locals())
 
 fh.write('</table></div>')
@@ -172,6 +178,7 @@ fh.write('''
     bud_price = %(bud_price).5f;
     bud_dollars = %(bud_dollars).5f;
   </script>
+  <footer>This data is for private use only. Do not share. It is not indexed.</footer>
 ''' % locals())
 
 fh.write('</body></html>\n')
