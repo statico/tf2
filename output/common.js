@@ -16,7 +16,7 @@ $(function() {
     var key = ref / key_price;
     var bill = ref / (bill_price * key_price);
     var bud = ref / (bud_price * key_price);
-    var usd = bud * bud_dollars * 1.13; // seems low?
+    var usd = bud * bud_dollars; // seems low?
     if (field !== 'ref') div.find('.ref').val(ref.toFixed(2));
     if (field !== 'key') div.find('.key').val(key.toFixed(2));
     if (field !== 'bill') div.find('.bill').val(bill.toFixed(2));
