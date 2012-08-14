@@ -10,7 +10,7 @@ div.long {
   height: 300px;
   overflow-y: scroll;
   border: 2px solid #cccccc; }
-  div.long a:link {
+  div.long a:link, div.long a:visited {
     color: black;
     text-decoration: none; }
   div.long a:hover {
