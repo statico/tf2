@@ -61,20 +61,26 @@ def do_stats(reader):
     if count > 10:
       fh.write('<tr><td>%s <span class="name">%s</span></td><td>%s</td></tr>' % (key[0], key[1], count))
 
+fh.write('<div class="module">')
 fh.write('<h2>TF2 Outpost wants</h2>')
 fh.write('<div class="long"><table>')
 reader = csv.reader(open('trades/tf2op-%s.csv' % today, 'r'))
 do_stats(reader)
 fh.write('</table></div>')
+fh.write('</div>')
 
+fh.write('<div class="module">')
 fh.write('<h2>TF2 Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
 reader = csv.reader(open('trades/tftp-%s.csv' % today, 'r'))
 do_stats(reader)
 fh.write('</table></div>')
+fh.write('</div>')
 
+fh.write('<div class="module">')
 fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
 fh.write('<div class="long"><table>')
+fh.write('</div>')
 
 key_price = 0
 bill_price = 0
