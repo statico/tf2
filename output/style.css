@@ -3,13 +3,15 @@ body {
 
 div.module {
   display: inline-block;
-  width: 45%;
+  width: 42%;
   margin: 1em; }
 
 div.long {
   height: 300px;
   overflow-y: scroll;
   border: 2px solid #cccccc; }
+  div.long table td, div.long table th {
+    padding-right: 1em; }
 
 iframe {
   width: 80%;
