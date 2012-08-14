@@ -29,3 +29,9 @@ if sys.stdout.isatty(): print obj, '->', filename
 
 fh = open(filename, 'w')
 fh.write(obj)
+
+# JPEG
+filename = os.path.join(os.path.dirname(sys.argv[0]), 'output', 'finance.jpg')
+fh = open(filename, 'wb')
+fh.write(urllib.urlopen('http://tf2finance.com/live.png').read())
+

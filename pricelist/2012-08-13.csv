@@ -1,10 +1,10 @@
 unique / ltd.,all-misc,earbuds,26,26,key
-unique / ltd.,all,bill's hat,8,10,key
+unique / ltd.,all,bill's hat,8,9.5,key
 tool,item,key,2.5,2.55,ref
-unique,scout,void monk hair,2,2,key
-unique,demo,grenadier helm,2,2,key
-unique,pyro-misc,tribal bones,2,2,key
-unique,spy,ninja cowl,1.5,1.5,key
+unique,scout,void monk hair,1,1,key
+unique,demo,grenadier helm,1,2,key
+unique,pyro-misc,tribal bones,1,1,key
+unique,spy,ninja cowl,1,1,key
 genuine,pyro-misc,russian rocketeer,9,9,ref
 genuine,sniper,lone star,9,9,ref
 genuine,all-misc,awesomenauts badge,9,9,ref
@@ -13,7 +13,7 @@ unique / craft #,heavy-weap,huo long heatmaker,1,1,ref
 unique / craft #,scout-weap,flying guillotine,1,1.33,ref
 unique / craft #,pyro-weap,neon annihilator,0.66,0.66,ref
 unique / craft #,"scout, spy, heavy, engineer, sniper-misc",triad trinket,5,5,key
-unique / craft #,"scout, heavy, sniper, engineer-misc",champ stamp,4,5,key
+unique / craft #,"scout, heavy, sniper, engineer-misc",champ stamp,4,4,key
 unique / craft #,all-misc,marxman,3,3,key
 unique / craft #,all,human cannonball,2,2,key
 strange part,item,full moon kills,2,3,key
@@ -22,7 +22,7 @@ genuine,medic-misc,quadwrangler,3,4,key
 genuine,"soldier,pyro,demo-misc",professor's pineapple,1,1,key
 genuine,soldier,cross-comm crash helmet,1,1,key
 genuine,scout,cross-comm express,2,2.5,key
-genuine,"sniper, spy-misc",doublecross-comm,6,6,key
+genuine,"sniper, spy-misc",doublecross-comm,5,6,key
 unique / craft #,spy-misc,business casual,1.66,1.66,ref
 unique / craft #,engineer,idea tube,1.33,1.66,ref
 unique / craft #,pyro,hazmat headcase,1.66,2,ref
@@ -30,10 +30,10 @@ unique / craft #,medic,gentleman's ushanka,1.33,1.66,ref
 unique / craft #,scout,fed-fightin' fedora,1.33,1.66,ref
 unique,soldier,helmet without a home,1.33,1.33,ref
 genuine,all-misc,balloonicorn,1,1.5,bud
-unique / craft #,all-misc,balloonicorn,2.5,2.5,key
+unique / craft #,all-misc,balloonicorn,2,2.5,key
 unique / craft #,heavy-misc,apparatchik's apparel,1.33,1.66,ref
 unique / craft #,demo-misc,bird-man of aberdeen,1,1,key
-unique / craft #,pyro-misc,infernal orchestrina,2,2.33,ref
+unique / craft #,pyro-misc,infernal orchestrina,1.66,2,ref
 unique / craft #,pyro-misc,burning bongos,2.5,3,key
 unique / craft #,scout-misc,dillinger's duffel,1.66,1.66,ref
 unique / craft #,sniper,liquidator's lid,1.33,1.66,ref
@@ -50,8 +50,8 @@ strange,pyro-weap,rainblower,1,1,key
 strange,soldier-weap,escape plan,0.33,0.33,ref
 vintage,soldier-weap,escape plan,0.33,0.33,ref
 vintage,pyro-misc,pyrovision goggles,0.66,0.66,ref
-tool,item,barely-melted capacitor,3,4,key
-tool,item,fireproof secret diary,1,1,bud
+unique,all-misc,barely-melted capacitor,4,4,key
+tool,item,fireproof secret diary,2,2,bud
 unique / craft #,demo-misc,liquor locker,2,3,key
 unique / craft #,medic-misc,surgeon's side satchel,1.5,1.5,key
 unique / craft #,spy-misc,sneaky spats of sneaking,2,3,key
@@ -95,10 +95,10 @@ strange,spy,diamondback,0.22,0.33,ref
 strange part,item,enemies gibbed,1.66,2,ref
 strange part,item,airborne enemies killed,1.33,1.33,ref
 strange part,item,heavies killed,1.66,2,ref
-strange,heavy,holiday punch,3,3,key
-strange,sniper,huntsman,13,13,key
+strange,heavy,holiday punch,2,2,key
+strange,sniper,huntsman,13,14,key
 strange,engineer,widowmaker,4,4,key
-strange,soldier,mantreads,2,3,key
+strange,soldier,mantreads,2,2,key
 strange,spy,electro sapper,10,10,key
 crate,item,mann co. supply crate (series 42),0,0,scrap
 crate,item,mann co. supply crate (series 41),0,0,ref
@@ -231,8 +231,8 @@ unique / craft #,pyro-misc,jingle belt,1.66,2,ref
 unique / craft #,heavy-misc,sandvich safe,2,2.33,ref
 unique / craft #,engie-misc,stocking stuffer,1.66,2,ref
 unique / craft #,sniper-misc,outback intellectual,2.5,3,key
-unique,all,dr. grordbert's copper crest (dirty),2,3,ref
-unique,all,dr. grordbert's silver crest (dirty),3,4,ref
+unique,all,dr. grordbert's copper crest (dirty),2,2,ref
+unique,all,dr. grordbert's silver crest (dirty),3,3,ref
 tool,noisemaker,winter holiday,0.11,0.11,ref
 unique / craft #,engineer/sniper-misc,itsy bitsy spyer,4,5,ref
 unique / craft #,medic/spy-misc,dr. whoa (clean),2,2,key
@@ -334,7 +334,7 @@ unique / craft #,soldier,armored authority,1.33,1.66,ref
 unique / craft #,soldier-misc,fancy dress uniform,4,4,ref
 unique / craft #,spy,cosa nostra cap,1.66,2,ref
 unique / craft #,spy-misc,made man,2.33,2.33,ref
-unique / craft #,soldier/heavy/med,team captain,6,6,ref
+unique / craft #,soldier/heavy/med,team captain,5,6,ref
 unique / craft #,sniper-misc,villain's veil,1,1,key
 unique / craft #,pyro,hottie's hoodie,2.33,2.33,ref
 unique / craft #,heavy-misc,large luchadore,1.66,1.66,ref
@@ -439,7 +439,7 @@ strange,scout,festive bat,16,18,key
 strange,soldier,festive rocket launcher,0,0,bud
 strange,pyro,festive flame thrower,10,10,key
 strange,demo,festive stickybomb launcher,11,12,key
-strange,heavy,festive minigun,11,12,key
+strange,heavy,festive minigun,14,15,key
 strange,engineer,festive wrench,14,16,key
 strange,medic,festive medi gun,1,1,bud
 strange,sniper,festive sniper rifle,19,20,key

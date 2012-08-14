@@ -126,8 +126,13 @@ for quality, slot, name, low, high, unit in reader:
 
 fh.write('</table></div>')
 
+fh.write('<hr/>');
+
 fh.write('<h2>backpack.tf updates</h2>')
 fh.write('<iframe class="long" src="http://x.langworth.com/tf2-prices.html"></iframe>')
+
+fh.write('<h2>TF2 finance</h2>')
+fh.write('<p><img src="finance.jpg"/></p>')
 
 finance = json.loads(open('trades/finance-%s.json' % today, 'r').read())
 bud_dollars = finance['bud_dollars']
