@@ -106,7 +106,8 @@ def do_prices(prefix):
   reader = csv.reader(open('pricelist/%s-%s.csv' % (prefix, today), 'r'))
   for quality, slot, name, low, high, unit in reader:
 
-    if quality == 'unusual': continue
+    if quality == 'unusual': continue # no unusuals
+    if name.startswith("''"): continue # no custom names
 
     if prefix == 'spreadsheet':
       if name == 'key':

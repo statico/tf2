@@ -16,7 +16,7 @@ today = datetime.datetime.now().strftime('%Y-%m-%d')
 filename = os.path.join(os.path.dirname(sys.argv[0]), 'pricelist',
     'warehouse-%s.csv' % today)
 
-writer = csv.writer(codecs.open(filename, 'a', 'utf8'))
+writer = csv.writer(codecs.open(filename, 'w', 'utf8'))
 html = urllib.urlopen('http://www.tf2wh.com/allitems.php').read()
 soup = BeautifulSoup(html)
 
