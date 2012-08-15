@@ -143,22 +143,28 @@ reader = csv.reader(open('changes/backpack-%s.csv' % today, 'r'))
 for url, quality, name, change in reader:
   if quality == 'unusual': continue # too noisy
 
-  match = re.search(r'(\w) (\d+(?:\.\d+)? \w+) from (\d+(?:\.\d+)? \w+)', change)
-  old = match.group(2)
-  new = match.group(3)
+  match = re.search(r'(\w+) (\d+(?:\.\d+)?) (\w+) from (\d+(?:\.\d+)?) (\w+)', change)
+  direction = match.group(1)
+  diff = float(match.group(2))
+  unit1 = match.group(3)
+  old = float(match.group(4))
+  unit2 = match.group(5)
 
-  if 'up' in change:
+  if direction == 'up':
     cls = 'up'
-  elif 'down' in change:
+    new = old + diff
+  elif direction == 'down':
     cls = 'down'
+    new = old - diff
   else:
     cls = 'new'
+    new = 0
 
   fh.write('''
     <tr>
       <td><a href="%(url)s">%(name)s</a></td>
-      <td>%(old)s</td>
-      <td class="%(cls)s">%(new)s</td>
+      <td>%(old).2f %(unit1)s</td>
+      <td class="%(cls)s">%(new).2f %(unit2)s</td>
     </tr>''' % locals())
 
 fh.write('</table></div>')
