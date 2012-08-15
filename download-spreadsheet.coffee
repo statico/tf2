@@ -41,7 +41,7 @@ async.waterfall [
 
     dir = path.join path.dirname(process.argv[1]), 'pricelist'
     fs.mkdir dir
-    filename = path.join dir, strftime('%Y-%m-%d.csv')
+    filename = path.join dir, strftime('spreadsheet-%Y-%m-%d.csv')
     writer = fs.createWriteStream filename
 
     headers = 0

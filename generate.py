@@ -63,6 +63,8 @@ def do_stats(reader):
     if count > 10:
       fh.write('<tr><td>%s <span class="name">%s</span></td><td>%s</td></tr>' % (key[0], key[1], count))
 
+####### OUTPOST WANTS
+
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Outpost wants</h2>')
 fh.write('<div class="long"><table>')
@@ -71,6 +73,8 @@ do_stats(reader)
 fh.write('</table></div>')
 fh.write('</div>')
 
+####### TRADING POST WANTS
+
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
@@ -78,6 +82,8 @@ reader = csv.reader(open('trades/tftp-%s.csv' % today, 'r'))
 do_stats(reader)
 fh.write('</table></div>')
 fh.write('</div>')
+
+####### SPREADSHEET
 
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
@@ -88,7 +94,7 @@ bill_price = 0
 bud_price = 0
 
 old = {}
-reader = csv.reader(open('pricelist/%s.csv' % yesterday, 'r'))
+reader = csv.reader(open('pricelist/spreadsheet-%s.csv' % yesterday, 'r'))
 for quality, slot, name, low, high, unit in reader:
   key = '%s %s' % (quality, name)
   try:
@@ -97,7 +103,7 @@ for quality, slot, name, low, high, unit in reader:
     high = 0
   old[key] = (high, unit)
 
-reader = csv.reader(open('pricelist/%s.csv' % today, 'r'))
+reader = csv.reader(open('pricelist/spreadsheet-%s.csv' % today, 'r'))
 for quality, slot, name, low, high, unit in reader:
 
   if name == 'key':
@@ -133,6 +139,8 @@ for quality, slot, name, low, high, unit in reader:
 
 fh.write('</table></div>')
 fh.write('</div>')
+
+####### BACKPACK
 
 fh.write('<div class="module">')
 fh.write('<h2>Backpack.tf Changes</h2>')
@@ -170,10 +178,14 @@ for url, quality, name, change in reader:
 fh.write('</table></div>')
 fh.write('</div>')
 
+####### FINANCE IMAGE
+
 fh.write('<hr/>');
 
 fh.write('<h2>TF2 finance</h2>')
 fh.write('<p><img src="finance.jpg"/></p>')
+
+####### FOOTER / SCRIPTS
 
 finance = json.loads(open('trades/finance-%s.json' % today, 'r').read())
 bud_dollars = finance['bud_dollars']
