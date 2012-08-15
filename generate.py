@@ -89,6 +89,9 @@ bill_price = 0
 bud_price = 0
 
 def do_prices(prefix):
+  global key_price
+  global bill_price
+  global bud_price
 
   old = {}
   reader = csv.reader(open('pricelist/%s-%s.csv' % (prefix, yesterday), 'r'))
@@ -105,12 +108,13 @@ def do_prices(prefix):
 
     if quality == 'unusual': continue
 
-    if name == 'key':
-      key_price = float(high)
-    if name == "bill's hat":
-      bill_price = float(high)
-    if name == 'earbuds':
-      bud_price = float(high)
+    if prefix == 'spreadsheet':
+      if name == 'key':
+        key_price = float(high)
+      if name == "bill's hat":
+        bill_price = float(high)
+      if name == 'earbuds':
+        bud_price = float(high)
 
     key = '%s %s' % (quality, name)
     cls = None

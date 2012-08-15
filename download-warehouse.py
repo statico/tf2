@@ -62,7 +62,7 @@ for item in soup.find('div', {'class': 'allitems'}).find_all('div', {'class': 'e
 
 # --------------------
 
-meta = {'key': key_price}
+meta = {'key': key_price, 'bud': earbuds_price}
 
 filename = os.path.join(os.path.dirname(sys.argv[0]), 'pricelist',
     'warehouse-meta-%s.json' % today)

@@ -7,6 +7,7 @@ $(function() {
       '<tr><th>key</th><td><input type="text" class="key"/></td></tr>' +
       '<tr><th>bill</th><td><input type="text" class="bill"/></td></tr>' +
       '<tr><th>bud</th><td><input type="text" class="bud"/></td></tr>' +
+      '<tr><th>cc</th><td><input type="text" class="cc"/></td></tr>' +
       '<tr><th>US$</th><td><input type="text" class="usd"/></td></tr>' +
     '</table>' +
     '</div>'
@@ -17,11 +18,13 @@ $(function() {
     var bill = ref / (bill_price * key_price);
     var bud = ref / (bud_price * key_price);
     var usd = bud * bud_dollars; // seems low?
+    var cc = key * key_credits;
     if (field !== 'ref') div.find('.ref').val(ref.toFixed(2));
     if (field !== 'key') div.find('.key').val(key.toFixed(2));
     if (field !== 'bill') div.find('.bill').val(bill.toFixed(2));
     if (field !== 'bud') div.find('.bud').val(bud.toFixed(2));
     if (field !== 'usd') div.find('.usd').val(usd.toFixed(2));
+    if (field !== 'cc') div.find('.cc').val(Math.ceil(cc));
   }
 
   function val(el) {
@@ -42,6 +45,9 @@ $(function() {
   });
   div.on('keyup', '.usd', function() {
     do_calc('usd', val(this) * key_price * bud_price * bud_dollars);
+  });
+  div.on('keyup', '.cc', function() {
+    do_calc('cc', val(this) * key_price / key_credits);
   });
 
   div.appendTo(document.body);
