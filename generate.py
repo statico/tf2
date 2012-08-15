@@ -52,7 +52,8 @@ fh.write('''<!doctype html>
 <h1>Trade Stats for %(today)s</h1>
 ''' % locals())
 
-def do_stats(reader):
+def do_trades(prefix):
+  reader = csv.reader(open('trades/%s-%s.csv' % (prefix, today), 'r'))
   stats = defaultdict(int)
   for tid, t, intent, quality, name, details in reader:
     if intent == 'WANT':
@@ -68,8 +69,7 @@ def do_stats(reader):
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Outpost wants</h2>')
 fh.write('<div class="long"><table>')
-reader = csv.reader(open('trades/tf2op-%s.csv' % today, 'r'))
-do_stats(reader)
+do_trades('tf2op')
 fh.write('</table></div>')
 fh.write('</div>')
 
@@ -78,65 +78,83 @@ fh.write('</div>')
 fh.write('<div class="module">')
 fh.write('<h2>TF2 Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
-reader = csv.reader(open('trades/tftp-%s.csv' % today, 'r'))
-do_stats(reader)
+do_trades('tftp')
 fh.write('</table></div>')
 fh.write('</div>')
 
 ####### SPREADSHEET
 
-fh.write('<div class="module">')
-fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
-fh.write('<div class="long"><table>')
-
 key_price = 0
 bill_price = 0
 bud_price = 0
 
-old = {}
-reader = csv.reader(open('pricelist/spreadsheet-%s.csv' % yesterday, 'r'))
-for quality, slot, name, low, high, unit in reader:
-  key = '%s %s' % (quality, name)
-  try:
-    high = float(high)
-  except:
-    high = 0
-  old[key] = (high, unit)
+def do_prices(prefix):
 
-reader = csv.reader(open('pricelist/spreadsheet-%s.csv' % today, 'r'))
-for quality, slot, name, low, high, unit in reader:
+  old = {}
+  reader = csv.reader(open('pricelist/%s-%s.csv' % (prefix, yesterday), 'r'))
+  for quality, slot, name, low, high, unit in reader:
+    key = '%s %s' % (quality, name)
+    try:
+      high = float(high)
+    except:
+      high = 0
+    old[key] = (high, unit)
 
-  if name == 'key':
-    key_price = float(high)
-  if name == "bill's hat":
-    bill_price = float(high)
-  if name == 'earbuds':
-    bud_price = float(high)
+  reader = csv.reader(open('pricelist/%s-%s.csv' % (prefix, today), 'r'))
+  for quality, slot, name, low, high, unit in reader:
 
-  key = '%s %s' % (quality, name)
-  cls = None
-  try:
-    high = float(high)
-  except:
-    high = 0
-  if key in old:
-    old_high, old_unit = old[key]
-    if old_high < high:
-      cls = 'up'
-    elif high > old_high:
-      cls = 'down'
-  else:
-    old_high = 0
-    old_unit = ''
-    cls = 'new'
-  if cls:
-    fh.write('''
-      <tr>
-        <td>%(quality)s <span class="name">%(name)s</span></td>
-        <td>%(old_high).2f %(old_unit)s</td>
-        <td class="%(cls)s">%(high).2f %(unit)s</td>
-      </tr>''' % locals())
+    if quality == 'unusual': continue
 
+    if name == 'key':
+      key_price = float(high)
+    if name == "bill's hat":
+      bill_price = float(high)
+    if name == 'earbuds':
+      bud_price = float(high)
+
+    key = '%s %s' % (quality, name)
+    cls = None
+    try:
+      high = float(high)
+    except:
+      high = 0
+    if key in old:
+      old_high, old_unit = old[key]
+      if old_high < high:
+        cls = 'up'
+      elif high < old_high:
+        cls = 'down'
+    else:
+      old_high = 0
+      old_unit = ''
+      cls = 'new'
+    if cls:
+      if unit == 'credits':
+        fh.write('''
+          <tr>
+            <td>%(quality)s <span class="name">%(name)s</span></td>
+            <td>%(old_high)dc</td>
+            <td class="%(cls)s">%(high)dc</td>
+          </tr>''' % locals())
+      else:
+        fh.write('''
+          <tr>
+            <td>%(quality)s <span class="name">%(name)s</span></td>
+            <td>%(old_high).2f %(old_unit)s</td>
+            <td class="%(cls)s">%(high).2f %(unit)s</td>
+          </tr>''' % locals())
+
+fh.write('<div class="module">')
+fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
+fh.write('<div class="long"><table>')
+do_prices('spreadsheet')
+fh.write('</table></div>')
+fh.write('</div>')
+
+fh.write('<div class="module">')
+fh.write('<h2>TF2 Warehouse Updates</h2>')
+fh.write('<div class="long"><table>')
+do_prices('warehouse')
 fh.write('</table></div>')
 fh.write('</div>')
 
@@ -187,8 +205,11 @@ fh.write('<p><img src="finance.jpg"/></p>')
 
 ####### FOOTER / SCRIPTS
 
-finance = json.loads(open('trades/finance-%s.json' % today, 'r').read())
-bud_dollars = finance['bud_dollars']
+data = json.loads(open('trades/finance-%s.json' % today, 'r').read())
+bud_dollars = data['bud_dollars']
+
+data = json.loads(open('pricelist/warehouse-meta-%s.json' % today, 'r').read())
+key_credits = data['key']
 
 fh.write('''
   <script>
@@ -196,6 +217,7 @@ fh.write('''
     bill_price = %(bill_price).5f;
     bud_price = %(bud_price).5f;
     bud_dollars = %(bud_dollars).5f;
+    key_credits = %(key_credits).5f;
   </script>
   <footer>This data is for private use only. Do not share. It is not indexed.</footer>
 ''' % locals())

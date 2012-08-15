@@ -34,6 +34,7 @@ QUALITY = {
     }
 
 key_price = 0
+earbuds_price = 0
 
 for item in soup.find('div', {'class': 'allitems'}).find_all('div', {'class': 'entry'}):
 
@@ -48,6 +49,12 @@ for item in soup.find('div', {'class': 'allitems'}).find_all('div', {'class': 'e
 
   if 'supply crate key' in name:
     key_price = price
+  if name == 'earbuds':
+    # There seems to be a fake lower-cost earbud item.
+    if price > earbuds_price:
+      earbuds_price = price
+    else:
+      continue
 
   row = [quality, slot, name, price, price, 'credits']
   if sys.stdout.isatty(): print row
