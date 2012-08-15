@@ -162,7 +162,7 @@ for url, quality, name, change in reader:
 
   fh.write('''
     <tr>
-      <td><a href="%(url)s">%(name)s</a></td>
+      <td><a href="%(url)s" target="_blank">%(name)s</a></td>
       <td>%(old).2f %(unit1)s</td>
       <td class="%(cls)s">%(new).2f %(unit2)s</td>
     </tr>''' % locals())
