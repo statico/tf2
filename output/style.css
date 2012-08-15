@@ -3,6 +3,7 @@ body {
 
 div.module {
   display: inline-block;
+  vertical-align: top;
   width: 42%;
   margin: 1em; }
 
