@@ -52,7 +52,7 @@ fh.write('''<!doctype html>
 <h1>Trade Stats for %(today)s</h1>
 ''' % locals())
 
-def do_trades(prefix):
+def do_trades(prefix, mintrades=10):
   reader = csv.reader(open('trades/%s-%s.csv' % (prefix, today), 'r'))
   stats = defaultdict(int)
   for tid, t, intent, quality, name, details in reader:
@@ -61,7 +61,7 @@ def do_trades(prefix):
   keys = reversed(sorted(stats.keys(), key=lambda x: stats[x]))
   for key in keys:
     count = stats[key]
-    if count > 10:
+    if count > mintrades:
       fh.write('''
         <tr>
           <td class="%s">%s <span class="name">%s</span></td>
@@ -74,7 +74,7 @@ def do_trades(prefix):
 fh.write('<div class="module">')
 fh.write('<h2>Outpost wants</h2>')
 fh.write('<div class="long"><table>')
-do_trades('tf2op')
+do_trades('tf2op', mintrades=10)
 fh.write('</table></div>')
 fh.write('</div>')
 
@@ -83,7 +83,7 @@ fh.write('</div>')
 fh.write('<div class="module">')
 fh.write('<h2>Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
-do_trades('tftp')
+do_trades('tftp', mintrades=20)
 fh.write('</table></div>')
 fh.write('</div>')
 
@@ -188,8 +188,9 @@ fh.write('<h2>Backpack.tf Changes</h2>')
 fh.write('<div class="long"><table>')
 
 old = {}
-reader = csv.reader(open('changes/backpack-%s.csv' % today, 'r'))
-for url, quality, name, change in reader:
+rows = list(csv.reader(open('changes/backpack-%s.csv' % today, 'r')))
+rows = sorted(rows, key=lambda x: x[2])
+for url, quality, name, change in rows:
   if quality == 'unusual': continue # too noisy
 
   match = re.search(r'(\w+) (\d+(?:\.\d+)?) (\w+) from (\d+(?:\.\d+)?) (\w+)', change)

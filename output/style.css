@@ -3,6 +3,8 @@ body {
 
 nav {
   margin-bottom: 1em; }
+  nav.external-links {
+    display: none; }
   nav a {
     text-decoration: none;
     border: 2px solid #0000ee;
@@ -13,27 +15,16 @@ nav {
     nav a:hover {
       background: #ffff99; }
 
-div.module {
-  display: inline-block;
-  vertical-align: top;
-  width: 46%;
-  padding: 0.5%; }
-
-div.long {
-  height: 300px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: 2px solid #cccccc; }
-  div.long a:link, div.long a:visited {
-    color: black;
-    text-decoration: none; }
-  div.long a:hover {
-    text-decoration: underline;
-    color: blue; }
-  div.long table td, div.long table th {
-    padding-right: 1em; }
-  div.long table td.new, div.long table td.up, div.long table td.down {
-    white-space: nowrap; }
+div.long a:link, div.long a:visited {
+  color: black;
+  text-decoration: none; }
+div.long a:hover {
+  text-decoration: underline;
+  color: blue; }
+div.long table td, div.long table th {
+  padding-right: 1em; }
+div.long table td.new, div.long table td.up, div.long table td.down {
+  white-space: nowrap; }
 
 iframe {
   width: 80%;
