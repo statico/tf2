@@ -1,15 +1,28 @@
 body
   font-family: sans-serif
 
+nav
+  margin-bottom: 1em
+  a
+    text-decoration: none
+    border: 2px solid #00e
+    border-radius: 5px
+    padding: 2px
+    &:link, &:visited
+      color: #00e
+    &:hover
+      background: #ff9
+
 div.module
   display: inline-block
   vertical-align: top
-  width: 42%
-  margin: 1em
+  width: 46%
+  padding: .5%
 
 div.long
   height: 300px
   overflow-y: scroll
+  overflow-x: hidden
   border: 2px solid #ccc
   a:link, a:visited
     color: black
@@ -58,3 +71,17 @@ iframe
 footer
   color: red
   font-weight: bold
+
+body.mobile
+  #calculator
+    display: none
+  nav.external-links
+    display: none
+  div.module
+    display: block
+    width: 100%
+    margin: 0
+  div.long
+    height: auto
+    overflow: visible
+    border-width: 0

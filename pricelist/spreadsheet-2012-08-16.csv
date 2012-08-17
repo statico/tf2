@@ -1,6 +1,29 @@
 unique / ltd.,all-misc,earbuds,26,26,key
 unique / ltd.,all,bill's hat,8,10,key
 tool,item,key,2.55,2.55,ref
+tool,item,tour of duty ticket,1,1,key
+tool,item,squad surplus voucher,2,3,key
+unique / craft #,medic-misc,archimedes,0,0,ref
+unique / craft #,soldier-misc,soldier's stogie,0,0,ref
+unique,all-misc,robro 3000,0,0,ref
+unique,heavy,u-clank-a,0,0,ref
+unique,spy,stealth steeler,0,0,ref
+unique,pyro-misc,pyrobotics pack,0,0,ref
+unique,medic-misc,medic mech-bag,0,0,ref
+unique,soldier,tin pot,0,0,ref
+unique,demo-misc,battery bandolier,0,0,ref
+unique,scout,robot running man,0,0,ref
+unique,sniper,bolted bushman,0,0,ref
+unique,engineer,tin-1000,0,0,ref
+unique,scout-weap,gold botkiller scattergun,0,0,ref
+unique,soldier-weap,gold botkiller rocket launcher,0,0,ref
+unique,pyro-weap,gold botkiller minigun,0,0,ref
+unique,demo-weap,gold botkiller stickybomb launcher,0,0,ref
+unique,heavy-weap,gold botkiller minigun,0,0,ref
+unique,engie-weap,gold botkiller wrench,0,0,ref
+unique,medic-weap,gold botkiller medi gun,0,0,ref
+unique,sniper-weap,gold botkiller sniper rifle,0,0,ref
+unique,spy-weap,gold botkiller knife,0,0,ref
 unique,scout,void monk hair,1,1,key
 unique,demo,grenadier helm,1,1,key
 unique,pyro-misc,tribal bones,1,1,key
@@ -9,10 +32,10 @@ genuine,pyro-misc,russian rocketeer,9,9,ref
 genuine,sniper,lone star,9,9,ref
 genuine,all-misc,awesomenauts badge,9,9,ref
 unique / craft #,spy,red-tape recorder,1,1,ref
-unique / craft #,heavy-weap,huo long heatmaker,1,1,ref
-unique / craft #,scout-weap,flying guillotine,1.33,1.33,ref
+unique / craft #,heavy-weap,huo long heatmaker,0.66,1,ref
+unique / craft #,scout-weap,flying guillotine,1,1.33,ref
 unique / craft #,pyro-weap,neon annihilator,0.66,0.66,ref
-unique / craft #,"scout, spy, heavy, engineer, sniper-misc",triad trinket,4.5,5,key
+unique / craft #,"scout, spy, heavy, engineer, sniper-misc",triad trinket,4,4,key
 unique / craft #,"scout, heavy, sniper, engineer-misc",champ stamp,3.5,4,key
 unique / craft #,all-misc,marxman,3,3,key
 unique / craft #,all,human cannonball,2,2,key
@@ -37,7 +60,7 @@ unique / craft #,pyro-misc,infernal orchestrina,1.66,2,ref
 unique / craft #,pyro-misc,burning bongos,2.5,3,key
 unique / craft #,scout-misc,dillinger's duffel,1.66,1.66,ref
 unique / craft #,sniper,liquidator's lid,1.33,1.66,ref
-unique,soldier,captain's cocktails,1.33,1.66,ref
+unique,soldier,captain's cocktails,1.33,1.33,ref
 unique,all,gentle munitionne of leisure (dirty),0,0,ref
 unique,sniper-weap,hitman's heatmaker,0.11,0.22,ref
 unique / craft #,sniper-weap,cleaner's carbine,0.11,0.22,ref
@@ -153,14 +176,14 @@ vintage,scout,troublemaker's tossle cap,7,8,key
 vintage,pyro,vintage merryweather,5,5,key
 vintage,pyro-misc,whiskered gentleman,3,4,key
 vintage,pyro,triboniophorus tyrannus,3,4,key
+vintage,engineer,texas ten gallon,3,3,key
+vintage,heavy,hound dog,3,3,key
 vintage,demoman,hustler's hallmark,2,3,key
 vintage,soldier,killer's kabuto,2,3,key
 vintage,medic,vintage tyrolean,2,3,key
-vintage,engineer,texas ten gallon,2,3,key
 vintage,soldier,tyrant's helm,2,2,key
 vintage,all,towering pillar of hats,4,5,ref
 vintage,all,modest pile of hat,4,5,ref
-vintage,heavy,hound dog,4,5,ref
 vintage,soldier,sergeant's drill hat,4,5,ref
 vintage,engineer,safe'n'sound,4,5,ref
 vintage,medic,ze goggles,3.66,4,ref
@@ -575,7 +598,7 @@ taunt,item-action,high-five (clean),6,7,ref
 taunt,item-action,meet the medic (clean),2.33,2.33,ref
 taunt,item-action,schadenfreude (clean),4,5,ref
 tool,item,decal tool,0.66,1,ref
-tool,item,backpack expander,3,3,key
+tool,item,backpack expander,2.5,3,key
 tool,item,secret saxton,0.33,0.33,ref
 paint,item,a distinctive lack of hue,6,6,ref
 paint,item,an extraordinary abundance of tinge,6,6,ref

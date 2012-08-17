@@ -1,5 +1,17 @@
 $(function() {
 
+  var b = $(document.body);
+  if (/Android|iPhone/.test(navigator.userAgent)) {
+    b.addClass('mobile');
+  }
+  var w = $(window);
+  w.on('resize', function() {
+    if (w.width() < 800)
+      b.addClass('mobile');
+    else
+      b.removeClass('mobile');
+  });
+
   var div = $(
     '<div id="calculator">' +
     '<table>' +
@@ -44,10 +56,10 @@ $(function() {
     do_calc('bud', val(this) * key_price * bud_price);
   });
   div.on('keyup', '.usd', function() {
-    do_calc('usd', val(this) * key_price * bud_price * bud_dollars);
+    do_calc('usd', val(this) / bud_dollars * key_price * bud_price);
   });
   div.on('keyup', '.cc', function() {
-    do_calc('cc', val(this) * key_price / key_credits);
+    do_calc('cc', val(this) / key_credits * key_price);
   });
 
   div.appendTo(document.body);

@@ -38,17 +38,17 @@ fh.write('''<!doctype html>
 <script src="common.js"></script>
 </head>
 <body>
-<p>
+<nav>
   <a href="%(yesterday)s.html">← %(yesterday)s</a>
   <a href="%(tomorrow)s.html">%(tomorrow)s →</a>
-</p>
-<p>
+</nav>
+<nav class="external-links">
   <a href="http://backpack.tf/pricelist">backpack.tf price list</a>
-  <a href="http://tf2spreadsheet.blogspot.com">tf2 spreadsheet</a>
-  <a href="http://www.tf2outpost.com/search">TF2 Outpost search</a>
-  <a href="http://tf2tp.com/searchMongo72.php">TF2 TP search</a>
+  <a href="http://tf2spreadsheet.blogspot.com">Spreadsheet</a>
+  <a href="http://www.tf2outpost.com/search">Outpost</a>
+  <a href="http://tf2tp.com/searchMongo72.php">Trading Post</a>
   <a href="http://www.sourceop.com/modules.php?name=Forums&file=viewforum&f=21">SourceOp</a>
-</p>
+</nav>
 <h1>Trade Stats for %(today)s</h1>
 ''' % locals())
 
@@ -67,7 +67,7 @@ def do_trades(prefix):
 ####### OUTPOST WANTS
 
 fh.write('<div class="module">')
-fh.write('<h2>TF2 Outpost wants</h2>')
+fh.write('<h2>Outpost wants</h2>')
 fh.write('<div class="long"><table>')
 do_trades('tf2op')
 fh.write('</table></div>')
@@ -76,7 +76,7 @@ fh.write('</div>')
 ####### TRADING POST WANTS
 
 fh.write('<div class="module">')
-fh.write('<h2>TF2 Trading Post wants</h2>')
+fh.write('<h2>Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
 do_trades('tftp')
 fh.write('</table></div>')
@@ -150,14 +150,14 @@ def do_prices(prefix):
           </tr>''' % locals())
 
 fh.write('<div class="module">')
-fh.write('<h2>TF2 Spreadsheet Price Updates</h2>')
+fh.write('<h2>Spreadsheet Price Updates</h2>')
 fh.write('<div class="long"><table>')
 do_prices('spreadsheet')
 fh.write('</table></div>')
 fh.write('</div>')
 
 fh.write('<div class="module">')
-fh.write('<h2>TF2 Warehouse Updates</h2>')
+fh.write('<h2>Warehouse Updates</h2>')
 fh.write('<div class="long"><table>')
 do_prices('warehouse')
 fh.write('</table></div>')
@@ -205,7 +205,7 @@ fh.write('</div>')
 
 fh.write('<hr/>');
 
-fh.write('<h2>TF2 finance</h2>')
+fh.write('<h2>finance</h2>')
 fh.write('<p><img src="finance.jpg"/></p>')
 
 ####### FOOTER / SCRIPTS

@@ -1,15 +1,28 @@
 body {
   font-family: sans-serif; }
 
+nav {
+  margin-bottom: 1em; }
+  nav a {
+    text-decoration: none;
+    border: 2px solid #0000ee;
+    border-radius: 5px;
+    padding: 2px; }
+    nav a:link, nav a:visited {
+      color: #0000ee; }
+    nav a:hover {
+      background: #ffff99; }
+
 div.module {
   display: inline-block;
   vertical-align: top;
-  width: 42%;
-  margin: 1em; }
+  width: 46%;
+  padding: 0.5%; }
 
 div.long {
   height: 300px;
   overflow-y: scroll;
+  overflow-x: hidden;
   border: 2px solid #cccccc; }
   div.long a:link, div.long a:visited {
     color: black;
@@ -59,3 +72,16 @@ iframe {
 footer {
   color: red;
   font-weight: bold; }
+
+body.mobile #calculator {
+  display: none; }
+body.mobile nav.external-links {
+  display: none; }
+body.mobile div.module {
+  display: block;
+  width: 100%;
+  margin: 0; }
+body.mobile div.long {
+  height: auto;
+  overflow: visible;
+  border-width: 0; }
