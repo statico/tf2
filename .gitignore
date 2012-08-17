@@ -3,3 +3,6 @@ lib
 include
 .Python
 share
+*-*-*.csv
+*-*-*.html
+*-*-*.json
