@@ -62,7 +62,12 @@ def do_trades(prefix):
   for key in keys:
     count = stats[key]
     if count > 10:
-      fh.write('<tr><td>%s <span class="name">%s</span></td><td>%s</td></tr>' % (key[0], key[1], count))
+      fh.write('''
+        <tr>
+          <td class="%s">%s <span class="name">%s</span></td>
+          <td>%s</td>
+        </tr>
+        ''' % (key[0], key[0], key[1], count))
 
 ####### OUTPOST WANTS
 
@@ -150,14 +155,14 @@ def do_prices(prefix):
       if unit == 'credits':
         fh.write('''
           <tr>
-            <td>%(quality)s <span class="name">%(name)s</span></td>
+            <td class="%(quality)s">%(quality)s <span class="name">%(name)s</span></td>
             <td>%(old_high)dc</td>
             <td class="%(cls)s">%(high)dc</td>
           </tr>''' % locals())
       else:
         fh.write('''
           <tr>
-            <td>%(quality)s <span class="name">%(name)s</span></td>
+            <td class="%(quality)s">%(quality)s <span class="name">%(name)s</span></td>
             <td>%(old_high).2f %(old_unit)s</td>
             <td class="%(cls)s">%(high).2f %(unit)s</td>
           </tr>''' % locals())
@@ -208,7 +213,7 @@ for url, quality, name, change in reader:
 
   fh.write('''
     <tr>
-      <td><a href="%(url)s" target="_blank">%(name)s</a></td>
+      <td class="%(quality)s"><a href="%(url)s" target="_blank">%(name)s</a></td>
       <td>%(old).2f %(unit1)s</td>
       <td class="%(cls)s">%(new).2f %(unit2)s</td>
     </tr>''' % locals())

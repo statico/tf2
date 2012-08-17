@@ -69,6 +69,24 @@ iframe {
     text-decoration: underline;
     color: blue; }
 
+td.unique, td.unique a:link {
+  color: #999900; }
+
+td.vintage, td.vintage a:link {
+  color: #000099; }
+
+td.unusual, td.unusual a:link {
+  color: #660066; }
+
+td.genuine, td.genuine a:link {
+  color: #339966; }
+
+td.strange, td.strange a:link {
+  color: #cc6600; }
+
+td.haunted, td.haunted a:link {
+  color: #990099; }
+
 footer {
   color: red;
   font-weight: bold; }
