@@ -101,9 +101,15 @@ def do_prices(prefix):
       high = float(high)
     except:
       high = 0
-    old[key] = (high, unit)
+
+    if key in old:
+      if high > old[key][0]:
+        old[key] = (high, unit)
+    else:
+      old[key] = (high, unit)
 
   reader = csv.reader(open('pricelist/%s-%s.csv' % (prefix, today), 'r'))
+  seen = {}
   for quality, slot, name, low, high, unit in reader:
 
     if quality == 'unusual': continue # no unusuals
@@ -118,6 +124,9 @@ def do_prices(prefix):
         bud_price = float(high)
 
     key = '%s %s' % (quality, name)
+    if key in seen: continue
+    seen[key] = True
+
     cls = None
     try:
       high = float(high)
@@ -133,6 +142,10 @@ def do_prices(prefix):
       old_high = 0
       old_unit = ''
       cls = 'new'
+
+    if name.startswith(quality):
+      name = name.replace(quality, '')
+
     if cls:
       if unit == 'credits':
         fh.write('''
@@ -175,6 +188,8 @@ for url, quality, name, change in reader:
   if quality == 'unusual': continue # too noisy
 
   match = re.search(r'(\w+) (\d+(?:\.\d+)?) (\w+) from (\d+(?:\.\d+)?) (\w+)', change)
+  if not match: continue
+
   direction = match.group(1)
   diff = float(match.group(2))
   unit1 = match.group(3)

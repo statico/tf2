@@ -50,7 +50,6 @@ unusual,head,unusual scotch bonnet,588000,588000,credits
 unusual,head,unusual grimm hatte,1008000,1008000,credits
 unusual,head,unusual grimm hatte,588000,588000,credits
 unusual,head,unusual triboniophorus tyrannus,570000,570000,credits
-unusual,head,unusual trophy belt,564000,564000,credits
 unusual,head,unusual big country,560000,560000,credits
 unusual,head,unusual flamboyant flamenco,560000,560000,credits
 unusual,head,unusual gentleman's gatsby,546000,546000,credits
@@ -92,6 +91,9 @@ unusual,head,unusual western wear,336000,336000,credits
 unusual,head,unusual dead cone,333000,333000,credits
 unusual,head,unusual magnificent mongolian,1512000,1512000,credits
 unusual,head,unusual magnificent mongolian,301000,301000,credits
+unusual,head,unusual backbiter's billycock,285000,285000,credits
+unusual,head,unusual trophy belt,564000,564000,credits
+unusual,head,unusual trophy belt,285000,285000,credits
 unusual,head,unusual ol' geezer,279000,279000,credits
 unique,misc,earbuds,275000,275000,credits
 unusual,head,unusual frenchman's beret,275000,275000,credits
@@ -115,7 +117,6 @@ genuine,misc,genuine balloonicorn,226385,226385,credits
 genuine,misc,genuine balloonicorn,226385,226385,credits
 genuine,misc,genuine balloonicorn,226385,226385,credits
 genuine,misc,genuine balloonicorn,226385,226385,credits
-genuine,misc,genuine balloonicorn,226385,226385,credits
 genuine,misc,''ze flying uberballoon!'',226385,226385,credits
 unusual,head,unusual football helmet,630000,630000,credits
 unusual,head,unusual football helmet,601000,601000,credits
@@ -126,13 +127,11 @@ strange,primary,''drlarry's expert level bodyshotter'',151920,151920,credits
 unique,misc,the bird-man of aberdeen #60,146000,146000,credits
 genuine,head,''el che'',140890,140890,credits
 genuine,head,genuine el jefe,140890,140890,credits
-genuine,head,genuine el jefe,140890,140890,credits
 unique,secondary,the big kill,138945,138945,credits
 unique,secondary,''the small kill'',138945,138945,credits
 strange,primary,''the avenger'',131130,131130,credits
 strange,primary,strange huntsman,131130,131130,credits
 unique,misc,the apparatchik's apparel #48,128484,128484,credits
-unique,building,the red-tape recorder #43,115101,115101,credits
 unique,misc,gentle manne's service medal,114330,114330,credits
 unique,misc,gentle manne's service medal,114330,114330,credits
 unique,misc,gentle manne's service medal,114330,114330,credits
@@ -209,16 +208,12 @@ vintage,head,vintage troublemaker's tossle cap,71020,71020,credits
 vintage,head,vintage troublemaker's tossle cap,71020,71020,credits
 vintage,head,vintage troublemaker's tossle cap,71020,71020,credits
 vintage,head,vintage troublemaker's tossle cap,71020,71020,credits
-vintage,head,vintage troublemaker's tossle cap,71020,71020,credits
 vintage,melee,vintage half-zatoichi,66460,66460,credits
 vintage,melee,''necras'',65585,65585,credits
 vintage,melee,''&quot;requesta in peace&quot;'',65585,65585,credits
 vintage,melee,vintage conniver's kunai,65585,65585,credits
 strange,melee,strange holy mackerel,65475,65475,credits
 strange,melee,''humiliated'',65475,65475,credits
-unique,misc,''???????????... ??????'',62545,62545,credits
-unique,misc,the essential accessories,62545,62545,credits
-unique,misc,the essential accessories,62545,62545,credits
 unique,misc,the essential accessories,62545,62545,credits
 unique,misc,the essential accessories,62545,62545,credits
 unique,misc,the essential accessories,62545,62545,credits
@@ -226,6 +221,7 @@ unique,misc,the essential accessories,62545,62545,credits
 unique,misc,the essential accessories,62545,62545,credits
 unique,melee,the lollichop #97,60000,60000,credits
 unique,misc,the teufort tooth kicker,59445,59445,credits
+unique,melee,the neon annihilator #63,58000,58000,credits
 unique,misc,the fast learner,54505,54505,credits
 unique,misc,the fast learner,54505,54505,credits
 genuine,misc,genuine doublecross-comm,54275,54275,credits
@@ -234,15 +230,12 @@ strange,melee,strange ullapool caber,51795,51795,credits
 genuine,head,genuine dashin' hashshashin,51795,51795,credits
 genuine,head,genuine dashin' hashshashin,51795,51795,credits
 unique,misc,the all-father,51060,51060,credits
-unique,misc,the all-father,51060,51060,credits
 unusual,melee,unusual horseless headless horsemann's headtaker,55500,55500,credits
 unusual,melee,unusual horseless headless horsemann's headtaker,50000,50000,credits
 genuine,misc,genuine ball-kicking boots,49500,49500,credits
 genuine,misc,genuine ball-kicking boots,49500,49500,credits
 genuine,misc,genuine ball-kicking boots,49500,49500,credits
-genuine,misc,genuine ball-kicking boots,49500,49500,credits
 genuine,melee,genuine sharp dresser,49500,49500,credits
-vintage,head,vintage vintage merryweather,45225,45225,credits
 unique,misc,the last breath,41135,41135,credits
 unique,misc,the doublecross-comm,40500,40500,credits
 strange,primary,strange grenade launcher,40430,40430,credits
@@ -259,7 +252,6 @@ genuine,head,genuine hero's tail,36810,36810,credits
 genuine,head,genuine hero's tail,36810,36810,credits
 vintage,melee,vintage amputator,36555,36555,credits
 strange,primary,strange widowmaker,36035,36035,credits
-unique,misc,the kringle collection,36000,36000,credits
 genuine,head,''brittany's luscious locks'',34960,34960,credits
 genuine,head,genuine battle bob,34960,34960,credits
 genuine,misc,genuine wingstick,34230,34230,credits
@@ -284,6 +276,7 @@ vintage,head,vintage hustler's hallmark,27450,27450,credits
 vintage,head,vintage hustler's hallmark,27450,27450,credits
 strange,primary,strange scattergun,26575,26575,credits
 strange,primary,''the street sweeper'',26575,26575,credits
+strange,primary,''metal masher'',26575,26575,credits
 unique,tool,backpack expander,25765,25765,credits
 unique,head,the dashin' hashshashin,25725,25725,credits
 unique,head,the dashin' hashshashin,25725,25725,credits
@@ -295,7 +288,6 @@ genuine,misc,genuine deus specs,25170,25170,credits
 vintage,head,vintage killer's kabuto,25105,25105,credits
 vintage,head,vintage killer's kabuto,25105,25105,credits
 vintage,head,vintage killer's kabuto,25105,25105,credits
-vintage,head,vintage killer's kabuto,25105,25105,credits
 vintage,head,"''??? ???? ???????,????? ??????.''",25105,25105,credits
 unique,misc,the burning bongos,24920,24920,credits
 genuine,head,genuine cross-comm express,24815,24815,credits
@@ -303,8 +295,7 @@ unique,action,taunt: the high five!,24140,24140,credits
 unique,misc,the liquor locker,23720,23720,credits
 genuine,head,genuine warsworn helmet,23680,23680,credits
 genuine,head,genuine warsworn helmet,23680,23680,credits
-vintage,head,vintage vintage tyrolean,23420,23420,credits
-vintage,head,vintage vintage tyrolean,23420,23420,credits
+genuine,head,genuine warsworn helmet,23680,23680,credits
 unique,head,lumbricus lid,23420,23420,credits
 unique,misc,the boston boom-bringer,23420,23420,credits
 genuine,action,genuine noise maker - vuvuzela,23250,23250,credits
@@ -321,9 +312,7 @@ unique,head,the front runner,21620,21620,credits
 genuine,misc,genuine planeswalker goggles,21600,21600,credits
 genuine,misc,genuine planeswalker goggles,21600,21600,credits
 genuine,misc,genuine planeswalker goggles,21600,21600,credits
-vintage,head,vintage modest pile of hat,20700,20700,credits
 vintage,head,vintage hound dog,20700,20700,credits
-vintage,head,vintage safe'n'sound,20700,20700,credits
 genuine,head,genuine conjurer's cowl,20465,20465,credits
 genuine,head,genuine conjurer's cowl,20465,20465,credits
 genuine,head,genuine conjurer's cowl,20465,20465,credits
@@ -346,6 +335,7 @@ genuine,head,genuine bolgan,18610,18610,credits
 unique,misc,the toss-proof towel,18515,18515,credits
 genuine,misc,genuine scrap pack,18315,18315,credits
 genuine,misc,genuine scrap pack,18315,18315,credits
+genuine,misc,genuine scrap pack,18315,18315,credits
 genuine,misc,genuine sign of the wolf's school,18240,18240,credits
 genuine,head,genuine anger,18020,18020,credits
 vintage,melee,vintage sun-on-a-stick,18000,18000,credits
@@ -365,6 +355,7 @@ vintage,primary,''nana nenem'',15315,15315,credits
 vintage,primary,vintage brass beast,15315,15315,credits
 unique,tool,strange part: buildings destroyed,15300,15300,credits
 strange,secondary,strange medi gun,15280,15280,credits
+strange,secondary,''the team'',15280,15280,credits
 strange,secondary,''nyan medic gun :d'',15280,15280,credits
 strange,primary,strange degreaser,15035,15035,credits
 vintage,head,vintage hotrod,14985,14985,credits
@@ -379,6 +370,7 @@ unique,misc,the tribal bones,14650,14650,credits
 unique,head,the grenadier helm,14570,14570,credits
 vintage,primary,vintage loch-n-load,14415,14415,credits
 unique,misc,the surgeon's side satchel,14370,14370,credits
+unique,misc,the surgeon's side satchel,14370,14370,credits
 unique,primary,festive rocket launcher,14245,14245,credits
 unique,misc,fancy dress uniform,14140,14140,credits
 unique,head,the hero's tail,14060,14060,credits
@@ -386,7 +378,6 @@ unique,head,the el jefe,14060,14060,credits
 unique,head,the el jefe,14060,14060,credits
 vintage,melee,vintage warrior's spirit,14010,14010,credits
 vintage,melee,''fist patrol'',14010,14010,credits
-unique,head,the cross-comm express,13630,13630,credits
 unique,head,the cross-comm express,13630,13630,credits
 strange,melee,strange your eternal reward,13620,13620,credits
 strange,melee,''surprise butt secks'',13620,13620,credits
@@ -414,8 +405,6 @@ unique,head,the head warmer,11830,11830,credits
 genuine,head,genuine cross-comm crash helmet,11710,11710,credits
 vintage,head,vintage whoopee cap,11680,11680,credits
 vintage,head,vintage noble amassment of hats,11390,11390,credits
-vintage,head,vintage soldier's stash,11390,11390,credits
-vintage,head,vintage soldier's stash,11390,11390,credits
 unique,misc,rogue's col roule,11350,11350,credits
 unique,misc,the deus specs,11350,11350,credits
 unique,misc,the cremator's conscience,11350,11350,credits
@@ -425,12 +414,12 @@ unique,tool,mann co. supply crate key,11200,11200,credits
 unique,misc,physician's procedure mask,11190,11190,credits
 unique,tool,after eight,11095,11095,credits
 vintage,head,vintage ye olde baker boy,11080,11080,credits
-vintage,head,vintage heavy duty rag,11080,11080,credits
 unique,tool,an air of debonair,11050,11050,credits
 genuine,head,genuine planeswalker helm,10940,10940,credits
 genuine,head,genuine mask of the shaman,10910,10910,credits
 genuine,head,genuine war head,10900,10900,credits
 unique,tool,gift wrap,10860,10860,credits
+genuine,misc,genuine professor's pineapple,10810,10810,credits
 genuine,misc,genuine professor's pineapple,10810,10810,credits
 unique,head,the battle bob,10745,10745,credits
 unique,head,the backwards ballcap,10555,10555,credits
@@ -449,15 +438,13 @@ vintage,head,vintage tough guy's toque,10485,10485,credits
 unique,misc,teddy roosebelt,10455,10455,credits
 unique,tool,the value of teamwork,10180,10180,credits
 unique,head,the anger,10180,10180,credits
+unique,head,the anger,10180,10180,credits
+unique,head,the anger,10180,10180,credits
 unique,melee,festive knife,10070,10070,credits
 unique,head,the infernal impaler,10065,10065,credits
 unique,misc,villain's veil,10050,10050,credits
-unique,misc,villain's veil,10050,10050,credits
-unique,misc,villain's veil,10050,10050,credits
-unique,misc,villain's veil,10050,10050,credits
 unique,misc,blighted beak,9890,9890,credits
 unique,head,''tuque'',9770,9770,credits
-unique,head,troublemaker's tossle cap,9770,9770,credits
 unique,head,troublemaker's tossle cap,9770,9770,credits
 unique,head,troublemaker's tossle cap,9770,9770,credits
 unique,head,the attendant,9670,9670,credits
@@ -512,7 +499,6 @@ vintage,head,vintage football helmet,8820,8820,credits
 vintage,head,vintage football helmet,8820,8820,credits
 vintage,head,vintage football helmet,8820,8820,credits
 vintage,head,vintage football helmet,8820,8820,credits
-vintage,head,vintage football helmet,8820,8820,credits
 unique,head,the bolgan,8705,8705,credits
 vintage,head,vintage glengarry bonnet,8700,8700,credits
 strange,secondary,strange ambassador,8645,8645,credits
@@ -533,8 +519,6 @@ unique,misc,aladdin's private reserve,8345,8345,credits
 unique,head,the conjurer's cowl,8320,8320,credits
 unique,head,the conjurer's cowl,8320,8320,credits
 unique,head,the conjurer's cowl,8320,8320,credits
-unique,head,the conjurer's cowl,8320,8320,credits
-unique,head,your worst nightmare,8290,8290,credits
 unique,head,your worst nightmare,8290,8290,credits
 unique,head,charmer's chapeau,8170,8170,credits
 genuine,melee,genuine conniver's kunai,8140,8140,credits
@@ -561,7 +545,6 @@ unique,misc,the jingle belt,7745,7745,credits
 genuine,secondary,genuine concheror,7680,7680,credits
 unique,misc,resurrection associate pin,7580,7580,credits
 unique,head,the bushman's boonie,7570,7570,credits
-unique,head,the bushman's boonie,7570,7570,credits
 unique,misc,le party phantom,7565,7565,credits
 genuine,melee,genuine sun-on-a-stick,7565,7565,credits
 unique,misc,the noh mercy,7565,7565,credits
@@ -571,7 +554,6 @@ unique,misc,the brainiac goggles,7565,7565,credits
 unique,head,the flamboyant flamenco,7565,7565,credits
 unique,misc,pyrovision goggles,7565,7565,credits
 unique,misc,the infernal orchestrina,7530,7530,credits
-unique,head,vintage tyrolean,7470,7470,credits
 unique,head,vintage tyrolean,7470,7470,credits
 unique,melee,three-rune blade,7470,7470,credits
 genuine,action,genuine noise maker - koto,7440,7440,credits
@@ -592,9 +574,10 @@ unique,misc,googly gazer,7080,7080,credits
 unique,head,the one-man army,7080,7080,credits
 unique,head,the swagman's swatter,7080,7080,credits
 unique,head,the cross-comm crash helmet,7080,7080,credits
+unique,head,the cross-comm crash helmet,7080,7080,credits
+unique,head,pyromancer's mask,6870,6870,credits
 unique,head,pyromancer's mask,6870,6870,credits
 unique,misc,the cold war luchador,6800,6800,credits
-unique,head,l'inspecteur,6790,6790,credits
 unique,head,l'inspecteur,6790,6790,credits
 unique,misc,the mark of the saint,6785,6785,credits
 unique,head,triboniophorus tyrannus,6770,6770,credits
@@ -610,7 +593,6 @@ unique,head,the hermes,6770,6770,credits
 genuine,misc,genuine atomic accolade,6770,6770,credits
 unique,misc,the hazmat headcase,6770,6770,credits
 strange,melee,strange jag,6720,6720,credits
-strange,melee,''conagher family's wrench'',6720,6720,credits
 genuine,head,genuine hetman's headpiece,6685,6685,credits
 genuine,head,genuine janissary ketche,6675,6675,credits
 unique,head,cosa nostra cap,6675,6675,credits
@@ -618,14 +600,12 @@ strange,secondary,strange flare gun,6650,6650,credits
 unique,head,towering pillar of hats,6630,6630,credits
 unique,misc,the bootie time,6605,6605,credits
 unique,misc,the snapped pupil,6585,6585,credits
-unique,head,professor's peculiarity,6580,6580,credits
 unique,tool,waterlogged lab coat,6575,6575,credits
 unique,misc,the stocking stuffer,6575,6575,credits
 unique,head,private eye,6475,6475,credits
 unique,misc,the crocodile smile,6475,6475,credits
 unique,tool,strange part: airborne enemies killed,6435,6435,credits
 unique,head,big country,6420,6420,credits
-unique,head,hustler's hallmark,6280,6280,credits
 unique,head,hustler's hallmark,6280,6280,credits
 unique,head,killer's kabuto,6280,6280,credits
 genuine,head,genuine brain bucket,6280,6280,credits
@@ -643,11 +623,12 @@ unique,head,brigade helm,6095,6095,credits
 strange,primary,strange rocket launcher,6080,6080,credits
 unique,head,d?tective noir,6080,6080,credits
 unique,head,d?tective noir,6080,6080,credits
+unique,head,d?tective noir,6080,6080,credits
 unique,head,backbiter's billycock,5985,5985,credits
-unique,head,scotsman's stove pipe,5985,5985,credits
 unique,head,scotsman's stove pipe,5985,5985,credits
 unique,head,noble amassment of hats,5985,5985,credits
 unique,head,magistrate's mullet,5985,5985,credits
+unique,head,whoopee cap,5985,5985,credits
 unique,head,whoopee cap,5985,5985,credits
 unique,head,safe'n'sound,5985,5985,credits
 unique,head,old guadalajara,5985,5985,credits
@@ -661,11 +642,11 @@ unique,misc,large luchadore,5985,5985,credits
 strange,primary,strange backburner,5985,5985,credits
 unique,head,mining light,5985,5985,credits
 unique,head,football helmet,5985,5985,credits
-unique,misc,pip-boy,5985,5985,credits
 unique,head,pyro's beanie,5985,5985,credits
 unique,head,pyro's beanie,5985,5985,credits
 unique,head,batter's helmet,5985,5985,credits
 unique,head,trophy belt,5985,5985,credits
+unique,head,soldier's stash,5985,5985,credits
 unique,head,the outdoorsman,5985,5985,credits
 unique,head,the tavish degroot experience,5985,5985,credits
 unique,head,the salty dog,5985,5985,credits
@@ -676,7 +657,6 @@ unique,misc,photo badge,5985,5985,credits
 unique,misc,the merc medal,5985,5985,credits
 unique,head,the helmet without a home,5985,5985,credits
 unique,misc,dillinger's duffel,5985,5985,credits
-unique,head,''rabbit fur headwarmer'',5985,5985,credits
 unique,head,tough guy's toque,5985,5985,credits
 unique,head,tyrant's helm,5985,5985,credits
 unique,misc,the wingstick,5980,5980,credits
@@ -685,7 +665,9 @@ unique,head,otolaryngologist's mirror,5955,5955,credits
 unique,head,texas slim's dome shine,5955,5955,credits
 unique,head,the athletic supporter,5955,5955,credits
 unique,head,reggaelator,5910,5910,credits
+unique,head,reggaelator,5910,5910,credits
 unique,head,a rather festive tree,5865,5865,credits
+unique,head,fancy fedora,5840,5840,credits
 unique,head,fancy fedora,5840,5840,credits
 unique,misc,the apparatchik's apparel,5810,5810,credits
 unique,head,the capo's capper,5790,5790,credits
@@ -745,6 +727,8 @@ unique,head,demoman's fro,5425,5425,credits
 unique,head,demoman's fro,5425,5425,credits
 unique,head,tippler's tricorne,5415,5415,credits
 vintage,misc,vintage foster's facade,5415,5415,credits
+vintage,misc,vintage foster's facade,5415,5415,credits
+vintage,misc,vintage foster's facade,5415,5415,credits
 unique,head,stately steel toe,5415,5415,credits
 unique,head,professional's panama,5405,5405,credits
 unique,head,the dead cone,5395,5395,credits
@@ -762,7 +746,6 @@ unique,head,glengarry bonnet,5355,5355,credits
 unique,head,the nanobalaclava,5355,5355,credits
 unique,head,master's yellow belt,5345,5345,credits
 unique,head,frenchman's beret,5345,5345,credits
-unique,head,"''new baked bread, you are dead''",5340,5340,credits
 unique,head,ye olde baker boy,5340,5340,credits
 unique,head,ritzy rick's hair fixative,5330,5330,credits
 unique,head,handyman's handle,5330,5330,credits
@@ -777,14 +760,11 @@ unique,head,bombing run,5280,5280,credits
 strange,secondary,strange stickybomb launcher,5270,5270,credits
 unique,head,hard counter,5235,5235,credits
 strange,primary,strange soda popper,5145,5145,credits
-unique,head,rimmed raincatcher,5030,5030,credits
-strange,primary,strange flame thrower,4965,4965,credits
 genuine,secondary,genuine diamondback,4735,4735,credits
 unique,tool,australium gold,4560,4560,credits
 vintage,secondary,vintage crit-a-cola,4500,4500,credits
 unique,secondary,refined metal,4500,4500,credits
 unique,tool,strange part: allies extinguished,4500,4500,credits
-strange,primary,''mahrvehl's medical crocket prototype'',4345,4345,credits
 strange,primary,strange black box,4345,4345,credits
 unique,tool,name tag,4260,4260,credits
 unique,tool,strange part: revenge kills,4190,4190,credits
@@ -793,7 +773,6 @@ strange,melee,strange wrench,4150,4150,credits
 unique,tool,aged moustache grey,4065,4065,credits
 genuine,primary,genuine widowmaker,4065,4065,credits
 unique,tool,mann co. orange,3885,3885,credits
-unique,action,mann co. store package,3885,3885,credits
 strange,primary,strange frontier justice,3780,3780,credits
 vintage,melee,vintage gunslinger,3780,3780,credits
 vintage,misc,vintage stockbroker's scarf,3780,3780,credits
@@ -805,6 +784,7 @@ unique,tool,a deep commitment to purple,3680,3680,credits
 unique,tool,indubitably green,3580,3580,credits
 unique,tool,strange part: demomen killed,3580,3580,credits
 unique,tool,strange part: soldiers killed,3580,3580,credits
+strange,melee,''the butterfly killer'',3565,3565,credits
 strange,melee,strange knife,3565,3565,credits
 unique,tool,description tag,3295,3295,credits
 unique,tool,strange part: posthumous kills,3285,3285,credits
@@ -818,29 +798,31 @@ unique,tool,zepheniah's greed,2990,2990,credits
 unique,tool,drably olive,2990,2990,credits
 unique,tool,the color of a gentlemann's business pants,2990,2990,credits
 strange,melee,strange amputator,2970,2970,credits
+strange,melee,strange ubersaw,2800,2800,credits
+strange,secondary,"''what?, boom!!!!!''",2730,2730,credits
 strange,secondary,strange reserve shooter,2730,2730,credits
-strange,secondary,''viagra drip'',2645,2645,credits
+unique,head,the blazing bull,2730,2730,credits
 strange,secondary,strange quick-fix,2645,2645,credits
 strange,secondary,strange smg,2495,2495,credits
 strange,primary,strange bazaar bargain,2495,2495,credits
 vintage,primary,vintage huntsman,2495,2495,credits
 strange,melee,strange lollichop,2495,2495,credits
 vintage,misc,vintage pyrovision goggles,2495,2495,credits
+strange,melee,strange axtinguisher,2485,2485,credits
 unique,head,the buzz killer,2440,2440,credits
 unique,head,the holy hunter,2435,2435,credits
 strange,melee,strange southern hospitality,2420,2420,credits
 strange,primary,strange shortstop,2395,2395,credits
-strange,primary,strange natascha,2375,2375,credits
 unique,head,the einstein,1870,1870,credits
-strange,melee,strange gloves of running urgently,1790,1790,credits
-strange,secondary,strange mad milk,1550,1550,credits
+strange,secondary,strange family business,1495,1495,credits
+unique,tool,color no. 216-190-216,1495,1495,credits
+vintage,secondary,vintage wrangler,1395,1395,credits
 unique,tool,peculiarly drab tincture,1395,1395,credits
 unique,tool,reclaimed metal,1350,1350,credits
 strange,primary,strange brass beast,1345,1345,credits
 unique,tool,muskelmannbraun,1300,1300,credits
 vintage,secondary,vintage dalokohs bar,1295,1295,credits
-unique,head,alien swarm parasite,1295,1295,credits
-vintage,primary,vintage force-a-nature,1295,1295,credits
+vintage,secondary,vintage sandvich,1295,1295,credits
 vintage,melee,vintage escape plan,1275,1275,credits
 strange,primary,strange loch-n-load,1260,1260,credits
 strange,primary,strange blutsauger,1260,1260,credits
@@ -849,6 +831,7 @@ strange,melee,strange market gardener,1260,1260,credits
 strange,melee,strange atomizer,1260,1260,credits
 strange,melee,strange big earner,1260,1260,credits
 strange,melee,strange escape plan,1260,1260,credits
+unique,head,the under cover,1255,1255,credits
 unique,head,the hair of the dog,1235,1235,credits
 strange,primary,strange direct hit,1210,1210,credits
 vintage,melee,vintage sandman,1200,1200,credits
@@ -868,6 +851,7 @@ strange,secondary,strange detonator,1100,1100,credits
 vintage,secondary,vintage ambassador,1100,1100,credits
 unique,head,ghastlierest gibus,1090,1090,credits
 strange,melee,strange powerjack,1050,1050,credits
+strange,secondary,strange l'etranger,1020,1020,credits
 unique,head,the can opener,1020,1020,credits
 vintage,secondary,vintage buff banner,1010,1010,credits
 vintage,melee,vintage equalizer,1000,1000,credits
@@ -883,12 +867,14 @@ strange,melee,strange killing gloves of boxing,1000,1000,credits
 vintage,melee,vintage killing gloves of boxing,1000,1000,credits
 vintage,secondary,vintage razorback,1000,1000,credits
 vintage,device,vintage cloak and dagger,1000,1000,credits
-strange,melee,strange bushwacka,945,945,credits
 strange,secondary,strange diamondback,945,945,credits
 unique,melee,the conscientious objector,935,935,credits
+unique,misc,the fallen angel,910,910,credits
 strange,melee,strange bottle,900,900,credits
 strange,melee,strange back scratcher,900,900,credits
 unique,melee,the spy-cicle,895,895,credits
+strange,primary,strange sydney sleeper,875,875,credits
+strange,primary,''sydnejski rozpierdalacz'',875,875,credits
 unique,misc,silver bullets,870,870,credits
 unique,secondary,mad milk,850,850,credits
 strange,melee,strange pain train,835,835,credits
@@ -899,7 +885,6 @@ unique,misc,tail from the crypt,795,795,credits
 strange,melee,strange fists,775,775,credits
 strange,melee,strange boston basher,760,760,credits
 vintage,melee,vintage eyelander,755,755,credits
-vintage,secondary,vintage kritzkrieg,755,755,credits
 unique,secondary,the family business,745,745,credits
 unique,primary,the rainblower,735,735,credits
 unique,primary,baby face's blaster,735,735,credits
@@ -929,10 +914,10 @@ vintage,primary,vintage blutsauger,570,570,credits
 vintage,melee,vintage axtinguisher,570,570,credits
 vintage,secondary,vintage flare gun,570,570,credits
 strange,secondary,strange razorback,550,550,credits
-unique,secondary,class token - pyro,540,540,credits
-unique,secondary,class token - engineer,540,540,credits
+unique,primary,slot token - primary,540,540,credits
 unique,secondary,the cleaner's carbine,535,535,credits
 unique,melee,the escape plan,535,535,credits
+strange,melee,strange eyelander,530,530,credits
 unique,melee,the eureka effect,530,530,credits
 unique,secondary,the manmelter,530,530,credits
 unique,melee,the scottish handshake,530,530,credits
@@ -947,7 +932,6 @@ unique,melee,the holiday punch,510,510,credits
 unique,melee,the lollichop,510,510,credits
 unique,secondary,the scorch shot,510,510,credits
 unique,secondary,pretty boy's pocket pistol,510,510,credits
-unique,action,power up canteen,500,500,credits
 unique,secondary,slot token - secondary,500,500,credits
 unique,secondary,scrap metal,450,450,credits
 unique,melee,your eternal reward,240,240,credits
@@ -1043,6 +1027,7 @@ unique,primary,the widowmaker,225,225,credits
 unique,secondary,the short circuit,225,225,credits
 unique,primary,the huntsman,225,225,credits
 unique,secondary,the razorback,225,225,credits
+unique,secondary,jarate,225,225,credits
 unique,device,the dead ringer,225,225,credits
 unique,device,the cloak and dagger,225,225,credits
 unique,secondary,the ambassador,225,225,credits
