@@ -83,7 +83,7 @@ fh.write('</div>')
 fh.write('<div class="module">')
 fh.write('<h2>Trading Post wants</h2>')
 fh.write('<div class="long"><table>')
-do_trades('tftp', mintrades=20)
+do_trades('tftp', mintrades=40)
 fh.write('</table></div>')
 fh.write('</div>')
 
