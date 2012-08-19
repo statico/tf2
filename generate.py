@@ -259,9 +259,16 @@ for quality, slot, name, low, high, unit in reader:
   prices[(quality, pname)] = price
 
 reader = csv.reader(open('pricelist/warehouse-%s.csv' % today, 'r'))
+seen = {}
 for quality, slot, name, low, high, unit in reader:
   pname = re.sub(r'\W', '', name).lower().strip()
-  bp_price = prices.get((quality, pname))
+  key = (quality, pname)
+  if key in seen:
+    continue
+  else:
+    seen[key] = True
+
+  bp_price = prices.get(key)
   wh_price = price2ref(float(high), unit)
   if not (bp_price and wh_price): continue
   if bp_price < 1.5 and quality == 'unique': continue
