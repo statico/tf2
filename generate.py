@@ -89,9 +89,28 @@ fh.write('</div>')
 
 ####### SPREADSHEET
 
+data = json.loads(open('trades/finance-%s.json' % today, 'r').read())
+bud_dollars = data['bud_dollars']
+
+data = json.loads(open('pricelist/warehouse-meta-%s.json' % today, 'r').read())
+key_credits = data['key']
+
 key_price = 0
 bill_price = 0
 bud_price = 0
+
+def price2ref(value, unit):
+  if unit == 'ref':
+    return value
+  elif unit == 'bill':
+    return value * key_price * bill_price
+  elif unit == 'bud':
+    return value * key_price * bud_price
+  elif unit == 'credits':
+    return value / key_credits * key_price
+  else:
+    sys.stdout.write('Unknown unit: %s\n' % unit)
+    return
 
 def do_prices(prefix):
   global key_price
@@ -147,6 +166,8 @@ def do_prices(prefix):
       old_high = 0
       old_unit = ''
       cls = 'new'
+
+    if unit == 'ref' and high < 1.2 and quality == 'unique': continue
 
     if name.startswith(quality):
       name = name.replace(quality, '')
@@ -222,6 +243,46 @@ for url, quality, name, change in rows:
 fh.write('</table></div>')
 fh.write('</div>')
 
+####### WAREHOUSE ARBITRAGE
+
+fh.write('<div class="module">')
+fh.write('<h2>Arbitrage</h2>')
+fh.write('<div class="long"><table>')
+
+prices = {}
+threshold = .1 # Warehouse takes 10%
+
+reader = csv.reader(open('pricelist/backpack-%s.csv' % today, 'r'))
+for quality, slot, name, low, high, unit in reader:
+  pname = re.sub(r'\W', '', name).lower().strip()
+  price = price2ref(float(high), unit)
+  prices[(quality, pname)] = price
+
+reader = csv.reader(open('pricelist/warehouse-%s.csv' % today, 'r'))
+for quality, slot, name, low, high, unit in reader:
+  pname = re.sub(r'\W', '', name).lower().strip()
+  bp_price = prices.get((quality, pname))
+  wh_price = price2ref(float(high), unit)
+  if not (bp_price and wh_price): continue
+  if bp_price < 1.5 and quality == 'unique': continue
+
+  cls = None
+  if wh_price < bp_price * (1.0 - threshold):
+    cls = 'buy'
+  if wh_price > bp_price * (1.0 + threshold):
+    cls = 'sell'
+
+  if cls:
+    fh.write('''
+      <tr>
+        <td class="%(quality)s">%(quality)s %(name)s</td>
+        <td>bp: %(bp_price).2f ref</td>
+        <td class="%(cls)s">wh: %(wh_price).2f ref</td>
+      </tr>''' % locals())
+
+fh.write('</table></div>')
+fh.write('</div>')
+
 ####### FINANCE IMAGE
 
 fh.write('<hr/>');
@@ -230,12 +291,6 @@ fh.write('<h2>finance</h2>')
 fh.write('<p><img src="finance.jpg"/></p>')
 
 ####### FOOTER / SCRIPTS
-
-data = json.loads(open('trades/finance-%s.json' % today, 'r').read())
-bud_dollars = data['bud_dollars']
-
-data = json.loads(open('pricelist/warehouse-meta-%s.json' % today, 'r').read())
-key_credits = data['key']
 
 fh.write('''
   <script>

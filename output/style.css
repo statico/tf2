@@ -32,10 +32,10 @@ iframe {
   border: 2px solid #cccccc;
   height: 400px; }
 
-.up {
+.up, .buy {
   color: green; }
 
-.down {
+.down, .sell {
   color: red; }
 
 .new {
@@ -60,22 +60,25 @@ iframe {
     text-decoration: underline;
     color: blue; }
 
-td.unique, td.unique a:link {
+td.normal, td.normal a:link, td.normal a:visited {
   color: #999900; }
 
-td.vintage, td.vintage a:link {
+td.unique, td.unique a:link, td.unique a:visited {
+  color: #999900; }
+
+td.vintage, td.vintage a:link, td.vintage a:visited {
   color: #000099; }
 
-td.unusual, td.unusual a:link {
+td.unusual, td.unusual a:link, td.unusual a:visited {
   color: #660066; }
 
-td.genuine, td.genuine a:link {
+td.genuine, td.genuine a:link, td.genuine a:visited {
   color: #339966; }
 
-td.strange, td.strange a:link {
+td.strange, td.strange a:link, td.strange a:visited {
   color: #cc6600; }
 
-td.haunted, td.haunted a:link {
+td.haunted, td.haunted a:link, td.haunted a:visited {
   color: #990099; }
 
 footer {

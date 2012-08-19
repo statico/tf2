@@ -34,9 +34,9 @@ iframe
   border: 2px solid #ccc
   height: 400px
 
-.up
+.up, .buy
   color: green
-.down
+.down, .sell
   color: red
 .new
   color: gray
@@ -60,18 +60,16 @@ iframe
     text-decoration: underline
     color: blue
 
-td.unique, td.unique a:link
-  color: #990
-td.vintage, td.vintage a:link
-  color: #009
-td.unusual, td.unusual a:link
-  color: #606
-td.genuine, td.genuine a:link
-  color: #396
-td.strange, td.strange a:link
-  color: #c60
-td.haunted, td.haunted a:link
-  color: #909
+@mixin quality-color($name, $color)
+  td.#{$name}, td.#{$name} a:link, td.#{$name} a:visited
+    color: $color
+@include quality-color(normal, #990)
+@include quality-color(unique, #990)
+@include quality-color(vintage, #009)
+@include quality-color(unusual, #606)
+@include quality-color(genuine, #396)
+@include quality-color(strange, #c60)
+@include quality-color(haunted, #909)
 
 footer
   color: red

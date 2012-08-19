@@ -46,6 +46,8 @@ for item in soup.find('div', {'class': 'allitems'}).find_all('div', {'class': 'e
 
   price = int(item['price'])
   name = item['name'].encode('ascii', 'replace').lower()
+  if name.startswith(quality):
+    name = name.replace(quality + ' ', '').strip()
 
   if 'supply crate key' in name:
     key_price = price
